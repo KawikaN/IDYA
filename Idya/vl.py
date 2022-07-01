@@ -26,11 +26,12 @@ import win32api, win32con
 from PIL import Image
 import trigs
 from trigs import * #trigs is a package 
+from trigs import difs
 
 
 
 
-
+time.sleep(2)
 
 
 
@@ -43,33 +44,20 @@ SCREEN_X = win32api.GetSystemMetrics(0)
 SCREEN_Y = win32api.GetSystemMetrics(1)
 
 
-triggerbot = False #shoots with movement/enemy 
-t2s = False #Speaks out the words since your lazy
-vh = False #
-bhop = False #hop without thinking
-damage = False #reads the damage you dealt for u
-character = False #Auto lock that jett
-spike = False #do you have enough time to defuse?
-autophrase = False #gg's
-shortcut = False #tired of typing out the same messages? keybind it
-afkbot = False #Free xp? Dont want to be banned while using the bathroom?
-loadout = False #might as well let it buy your loadout 4 u too
-sing = False #let the bot webscrape for the lyrics to a song and type it in chat
-
 def sound():
     winsound.Beep(700, 200)
     winsound.Beep(100, 10)
 
-def offf():
+def offf(): #plays off sound
     winsound.Beep(440, 75)
     winsound.Beep(200, 100)
 
-def onn():
+def onn(): #plays on sound
     winsound.Beep(440, 75)
     winsound.Beep(700, 100)
 
 def trigoff():
-    offf()
+    offf() 
     print("Triggerbot inactive")
 
 def trigon():
@@ -113,7 +101,7 @@ def main():
 
 
 
-class CColor:
+class CColor: #defines the color for the os system output in printgui
 	Red = '\033[91m'
 	Green = '\u001b[32m'
 	Yellow = '\u001b[33m'
@@ -124,37 +112,34 @@ class CColor:
     
 
 def printgui():
-    os.system("cls") 
-    Color = CColor()
+    os.system("cls")  #clears the terminal
+    Color = CColor() 
     print(f"{Color.Yellow}[*]Triggerbot: {Color.Green}{triggerbot}{Color.Yellow} [*]{Color.White}")
     print(f"{Color.Red} - Text2Speach: {Color.Green}{t2s}{Color.Red}{Color.White}")
     print(f"{Color.Red} - Sniper Mode: {Color.Green}{vh}{Color.Red}{Color.White}\r\n")
     print(f"{Color.Yellow}[*]Bhop: {Color.Green}{bhop}{Color.Yellow} [*]{Color.White}")
-    print(f"{Color.Yellow}Damage Reader: {Color.Green}{damage}{Color.Yellow} [*]{Color.White}")
+    print(f"{Color.Yellow}Damage Reader: {Color.Green}{damage}{Color.Yellow} [*]{Color.White}") 
+    #messages that print out when we call this function(printgui)
     
 
-#call functions here
+#call functions you want to run here because there is a while loop after(will not run after loop)
 
 
 
 printgui()
 
 
+dif = (os.stat('Dot.png').st_size)-(os.stat('Dot2.png').st_size)
+dif2 = (os.stat('Point.png').st_size)-(os.stat('Point2.png').st_size)
+# find the difference in file sizes of image()
 
+while True: 
 
-
-
-
-
-
-
-while True:
-
-    if(keyboard.is_pressed("delete")):
+    if(keyboard.is_pressed("delete")): #press delete to kill the program
         print("Finished !")
         os._exit(1)
 
-    if(keyboard.is_pressed("5")):
+    if(keyboard.is_pressed("5")): #press 5 to start triggerbot
         triggerbot = not triggerbot
         print("start")
         if(triggerbot == True):
@@ -168,10 +153,11 @@ while True:
             im3.save(r"C:\Users\mnawe_000\Desktop\Idya\Point.png")
             img3 = "Point.png"
 
-            trigger()
+            trigger(dif, dif2)
         else:
             
             offf()
+
 
 
 

@@ -1,3 +1,3 @@
 from .trig import *
 from .trig import trigger
-print('hi')
+from .trig import difs
