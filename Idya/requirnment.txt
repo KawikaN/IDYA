@@ -1,0 +1,35 @@
+must have the following modules installed
+to install manually open command prompt as administrator
+Type in:
+pip install (module name)
+
+
+
+Module Names:
+ ctypes
+ os
+ keyboard
+ time
+ win32gui
+ mss
+ winsound
+ pyautogui
+ threading
+ interception   
+ constant
+ constants
+ mouse
+ keyboard
+ time
+ random
+ pytesseract  
+ pyautogui
+ keyboard
+ time
+ pyautogui
+ pytesseract  
+ random
+ win32api
+ win32con
+ PIL 
+#I lazzily wrote this down so if u get an error just move on to the next module cause I may have entered it as a mistake

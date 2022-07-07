@@ -26,9 +26,7 @@ import win32api, win32con
 from PIL import Image
 
 
-
-
-#errors to fix -  import photos file
+#errors to fix - does not take new photos every loop
 
 
 triggerbot = False #shoots with movement/enemy 
@@ -60,25 +58,20 @@ def rgb_of_pixel(img_path, x, y):
     im = Image.open(img_path).convert('RGB')
     r, g, b = im.getpixel((x,y))
     a = (r, g, b)
-    return a #useless to me for the time being(grabs rgb values of any given pixle)
+    return a
 
 def difs():
     dif = (os.stat('Dot.png').st_size)-(os.stat('Dot2.png').st_size)
     dif2 = (os.stat('Point.png').st_size)-(os.stat('Point2.png').st_size)
-    return dif, dif2
-dif = (os.stat('Dot.png').st_size)-(os.stat('Dot2.png').st_size)#defined here because I can...
-dif2 = (os.stat('Point.png').st_size)-(os.stat('Point2.png').st_size)
+    return dif2, dif
 #finds the differences in the image files
 
 
 # size checks to see if the difference in the image files are big enough in the middle(indicating that there was movemnet at the crosshair)
 # but small enough at the top (indicating the entire screen didnt change)
-def size():
+def size(dif, dif2):
     point()
-    dif = (os.stat('Dot.png').st_size)-(os.stat('Dot2.png').st_size)#defined here because I can...
-    dif2 = (os.stat('Point.png').st_size)-(os.stat('Point2.png').st_size)
-    print(dif)
-    print(dif2)
+    difs()
     if(dif < 15 and dif >= 0 or dif > -15 and dif <= 0): #if the difference is not big then return 1
         print("no change at crosshair")
         return 1
@@ -87,7 +80,9 @@ def size():
         if (dif >15 or dif < -15): 
             mouse.click() #click to fire if all perameters were met
             print("clicked")
-        return 2
+            return 2
+        print("change")
+        return 1
          
 
     else:
@@ -105,34 +100,35 @@ def size():
 
 def point():
     im4 = pyautogui.screenshot(region=(955,100,20,20)) #x, y(from top), width, height(down)
-    im4.save(r"C:\Users\mnawe_000\Desktop\Idya\photos\Point2.png")
+    im4.save(r"C:\Users\mnawe_000\Desktop\Idya\Point2.png")
     img4 = "Point2.png"
     #gets and stores image as Point2
 
 
 
 
-def dot2(): #gets and stores image as Dot2
+def dot2(dif, dif2): #gets and stores image as Dot2
     im2 = pyautogui.screenshot(region=(955, 535, 15, 15))
-    im2.save(r"C:\Users\mnawe_000\Desktop\Idya\photos\Dot2.png")
+    im2.save(r"C:\Users\mnawe_000\Desktop\Idya\Dot2.png")
     img2 = "Dot2.png"
+    size(dif2, dif)
 
 def ppp(): #test can delete
     print("ppp")
 
 
-def trigger(): 
+def trigger(dif, dif2): 
     while (keyboard.is_pressed("ctrl+f") != True): #while ctrl+f is not pressed run the code
-        dot2()
-        while (size() == 1): #if the size function returns 1 run dot again and keep looping
-            dot2()
-
-        if (size() == 2): #if the size function returns 2 then kill the loop cause it fired
+        dot2(dif, dif2)
+        while (size(dif, dif2) == 1): #if the size function returns 1 run dot again and keep looping
+            dot2(dif, dif2)
+            time.sleep(2)
+        if (size(dif, dif2) == 2): #if the size function returns 2 then kill the loop cause it fired
             global triggerbot
             triggerbot = not triggerbot
             
             break
-        
+        time.sleep(.5)
     else: #ctrl+f was pressed and terminated the function
         print("trigger off") 
         offf()

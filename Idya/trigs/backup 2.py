@@ -26,9 +26,7 @@ import win32api, win32con
 from PIL import Image
 
 
-
-
-#errors to fix -  import photos file
+#errors to fix -  does not change after first loop
 
 
 triggerbot = False #shoots with movement/enemy 
@@ -75,10 +73,10 @@ dif2 = (os.stat('Point.png').st_size)-(os.stat('Point2.png').st_size)
 # but small enough at the top (indicating the entire screen didnt change)
 def size():
     point()
-    dif = (os.stat('Dot.png').st_size)-(os.stat('Dot2.png').st_size)#defined here because I can...
-    dif2 = (os.stat('Point.png').st_size)-(os.stat('Point2.png').st_size)
-    print(dif)
-    print(dif2)
+    difz = (os.stat('Dot.png').st_size)-(os.stat('Dot2.png').st_size)
+    difz2 = (os.stat('Point.png').st_size)-(os.stat('Point2.png').st_size)
+    print(difz)
+    print(difz2)
     if(dif < 15 and dif >= 0 or dif > -15 and dif <= 0): #if the difference is not big then return 1
         print("no change at crosshair")
         return 1
@@ -105,7 +103,7 @@ def size():
 
 def point():
     im4 = pyautogui.screenshot(region=(955,100,20,20)) #x, y(from top), width, height(down)
-    im4.save(r"C:\Users\mnawe_000\Desktop\Idya\photos\Point2.png")
+    im4.save(r"C:\Users\mnawe_000\Desktop\Idya\Point2.png")
     img4 = "Point2.png"
     #gets and stores image as Point2
 
@@ -114,7 +112,7 @@ def point():
 
 def dot2(): #gets and stores image as Dot2
     im2 = pyautogui.screenshot(region=(955, 535, 15, 15))
-    im2.save(r"C:\Users\mnawe_000\Desktop\Idya\photos\Dot2.png")
+    im2.save(r"C:\Users\mnawe_000\Desktop\Idya\Dot2.png")
     img2 = "Dot2.png"
 
 def ppp(): #test can delete
