@@ -20,19 +20,37 @@ import keyboard
 import random
 import win32api, win32con
 import time
-from photos import *
 
 
-while translate_url:
+#while True:
 
-    def dot2(): #gets and stores image as Dot2
-        im2 = pyautogui.screenshot(region=(955, 535, 15, 15))
-        im2.save(r"C:\Users\mnawe_000\Desktop\Idya\Dot2.png")
-        img2 = "Dot2.png"
+    # def dot2(): #gets and stores image as Dot2
+    #     im2 = pyautogui.screenshot(region=(955, 535, 15, 15))
+    #     im2.save(r"C:\Users\mnawe_000\Desktop\Idya\Dot2.png")
+    #     img2 = "Dot2.png"
 
-    dot2()
-    dif = (os.stat('Dot.png').st_size)-(os.stat('Dot2.png').st_size)
-    print(dif)
+    # dot2()
+    # dif = (os.stat('Dot.png').st_size)-(os.stat('Dot2.png').st_size)
+    # print(dif)
+
+
+
+
+
+#assigning typed phrases to keys
+x = 1
+
+
+def hi():
+    print("Hi")
+    if(x == 1):
+        return 1
+    if(x != 1):
+        return 2
+
+while True:
+    if(hi() == 1):
+        print("Done")
 
     
     

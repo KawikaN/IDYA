@@ -1,0 +1,10 @@
+make triggerbot quicker
+get trig.py to import the photos 
+
+ctrl+b to add a shortcut
+4 to start shortcut
+ctrl + g to stop adding shortcut off start
+
+
+shortcuts - 4 to run - ctrl+4 to add more
+
