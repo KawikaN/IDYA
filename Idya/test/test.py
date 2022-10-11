@@ -20,6 +20,7 @@ import keyboard
 import random
 import win32api, win32con
 import time
+import mouse
 
 
 #while True:
@@ -35,22 +36,27 @@ import time
 
 
 
+# def c1():
+#     print("1")
+# def c2():
+#     print("2")
+# def c3():
+#     print("3")
+# def c4():
+#     print("4")
+# def c5():
+#     print("hi")
+
+# def gc():
+#     g = "c"+str(random.randrange(1, 5))
+#     t = str(g.replace(" ",""))
+#     print()
+#     l = globals()[t]()
+#     return l
+
+# for i in range(random.randint(0, 5)):
+#     gc()
 
 
-#assigning typed phrases to keys
-x = 1
-
-
-def hi():
-    print("Hi")
-    if(x == 1):
-        return 1
-    if(x != 1):
-        return 2
-
-while True:
-    if(hi() == 1):
-        print("Done")
-
-    
-    
+mouse.press()
+mouse.release()

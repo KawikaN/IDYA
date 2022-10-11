@@ -1,12 +1,15 @@
 #unused for now: ctypes, win32gui, mss, threading, constant, constants, mouse, random, win32con, trigs
 try:
-    import os, keyboard, time, winsound, pyautogui, keyboard, time, win32api, trigs
+    import os, keyboard, time, winsound, pyautogui, keyboard, win32api, trigs
     from interception import  *
     from constants import *
     from pytesseract import *
     from PIL import Image
     from trigs import * #trigs is a package 
     from short import *
+    from short.shortcut import Phrase
+    from short.shortcut import *
+    from lazy.afk import *
 except:
     print("There was an error trying to import the required files, check required.txt for the required libraries")
 
@@ -77,11 +80,31 @@ while True:
 
         trigger() #run trigger function in trig.py file in trigs package
         
+
+        #uses while loop so make sure this is the last thing you want to enable wont be able to access anything else after
     if(keyboard.is_pressed("4")): #press 4 to start shortcut
         shortcut = True
-        if(keyboard.is_pressed("ctrl+4")):
-            run() #press ctrl + 4 to add shortcuts
         print("starting")
         onn()
-
+        
         ask()
+
+        if(keyboard.is_pressed("ctrl+4")):
+            run() #press ctrl + 4 to add shortcuts
+    if(shortcut == True): # in while loop so it will keep checking this
+        for name in dict: # iterates throguh dictionary to look at all the keys
+            if(keyboard.is_pressed(dict[name])): # if the key is pressed
+                print(dict[name], "Pressed")
+                keyboard.press_and_release('t') # opens text chat
+                keyboard.press_and_release("/") 
+                keyboard.press_and_release(ct[name]) # presses the chat u want it in
+                keyboard.write(name) # writes the phrase
+                keyboard.press_and_release("enter")
+                print("Said: ", name)
+
+    if(keyboard.is_pressed("6")):
+        afk = True
+        print("Starting")
+        onn()
+
+        afks()
