@@ -2,14 +2,13 @@
 import keyboard, time, mouse, pyautogui, random
 from random import getrandbits
 
+# make if in a casual it uses abilities 
+# buys loadouts
 
+letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
 def brb(): # keeps you afk (run games)
     pass
-
-
-
-
 
 def c1(): # each a different and unique order of key presses
     mouse.press()
@@ -19,11 +18,21 @@ def c2():
     keyboard.press(2)
     keyboard.press('y') # try to find the settings data (tried files not there, try using api)
 def c3():
-    print("hi")
+    for i in range(random.randint(1,5), 5):
+        keyboard.KEY_DOWN('control')
+        time.sleep(i)
+        keyboard.KEY_UP('control')
 def c4():
-    print("hi")
+    keyboard.press('t')
+    keyboard.press('/')
+    if(getrandbits(1) == 0):
+        keyboard.press('a')
+    else:
+        keyboard.press('t')
+
 def c5():
-    print("hi")
+    for x in range(1, 10):
+        keyboard.press('space')
 
 def gc():
     g = "c"+str(random.randrange(1, 5))
@@ -31,8 +40,6 @@ def gc():
     print()
     l = globals()[t]()
     return l
-
-
 
 def afks():
     while(keyboard.is_pressed('delete') != True):

@@ -1,17 +1,21 @@
 #unused for now: ctypes, win32gui, mss, threading, constant, constants, mouse, random, win32con, trigs
 try:
-    import os, keyboard, time, winsound, pyautogui, keyboard, win32api, trigs
+    import os, keyboard, time, winsound, pyautogui, keyboard, win32api
     from interception import  *
     from constants import *
     from pytesseract import *
     from PIL import Image
     from trigs import * #trigs is a package 
     from short import *
-    from short.shortcut import Phrase
     from short.shortcut import *
     from lazy.afk import *
+    from gear.loadout import *
+    from char.pick import *
+    
 except:
     print("There was an error trying to import the required files, check required.txt for the required libraries")
+
+#because we imported packages above we have other variables that arnt seen here(triggerbot, loadout...)
 
 #get picture of area near crosshair
 #if rgb changes then clicks
@@ -83,7 +87,7 @@ while True:
 
         #uses while loop so make sure this is the last thing you want to enable wont be able to access anything else after
     if(keyboard.is_pressed("4")): #press 4 to start shortcut
-        shortcut = True
+        shortcut = True    # try to add custom voiceline/sound shortcuts
         print("starting")
         onn()
         
@@ -108,3 +112,18 @@ while True:
         onn()
 
         afks()
+    if(keyboard.is_pressed("7")):# press 7 to run loadout
+        loadout = True
+        print("Lets save a loadout first \n press 'L' beffore openning menue to buy a loadout\n")
+        load()
+        con()
+        print("If you every want to add a different loadout to use press ctrl+L")
+    if(loadout == True):
+        if(keyboard.is_pressed("ctrl+7")):# press ctrl+7 to h6+ ave it buy loadouts
+            chlo(load()[0], load()[1], load()[3])
+        if(keyboard.is_pressed("ctrl+l")):# press ctrl+l to add another loadout for it to buy
+            cl()
+
+    if(keyboard.is_pressed("8")):
+        character = True
+    

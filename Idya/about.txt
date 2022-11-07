@@ -1,4 +1,4 @@
-triggerbot = shoots with movement/enemy  -  5
+!triggerbot = shoots with movement/enemy  -  5
 t2s = Speaks out the words since your lazy   -   
 vs = visual display of sound so you dont need to hear -  
 bhop = hop without thinking  -   
@@ -6,9 +6,18 @@ damage = reads the damage you dealt for u  -
 character = Auto lock that jett  -   
 spike = do you have enough time to defuse?   -   
 autophrase = senses when it should say it  -   
-shortcut = tired of typing out the same messages? keybind it  -   4
-afkbot = Free xp? Dont want to be banned while using the bathroom?    -   
+!shortcut = tired of typing out the same messages? keybind it  -   4
+!afkbot = Free xp? Dont want to be banned while using the bathroom?    -   
 loadout = might as well let it buy your loadout 4 u too   -   
 sing = let the bot webscrape for the lyrics to a song and type it in chat   -   
 object detection = identify maps, agents, util,   -   
 lag switch = lagy boi
+
+
+
+
+
+This project is intended to automate some actions to improve the experience of the game for myself and maybe
+ a few close others to me. Its intension is to fullfill the lazy desires of active players of the game in
+ order to remove what some may concieve as "redundant" or out right "boring" actions that one might 
+ need to complete on a regular basis while playing the game. 

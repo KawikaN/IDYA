@@ -9,7 +9,7 @@ import mss
 import PIL.ImageGrab
 import PIL.Image
 import winsound
-import pyautogui
+import pyautogui  as pg
 import threading
 from interception import  *
 from constants import *
@@ -21,6 +21,46 @@ import random
 import win32api, win32con
 import time
 import mouse
+
+
+# print('--'.join(agents))
+
+
+# dict = {}
+
+# name = "kawika"
+# age = 5
+# height = 5.5
+
+
+# dict[name] = [age, height]
+
+# print(dict)
+
+#ctrl k c to comment    ctrl k u to uncomment
+
+# while True:
+#     if win32api.GetKeyState(0x01)<0:# if mouse is pressed
+#         print('h')
+#     print('j')
+#     time.sleep(0.5)
+
+
+# l = 3
+# for k in l:
+#     print("hi")
+
+
+
+# print(mouse.get_position()[0])
+
+
+
+# pos = pg.position()[0]
+
+# print(pos)
+
+
 
 
 #while True:
@@ -57,6 +97,13 @@ import mouse
 # for i in range(random.randint(0, 5)):
 #     gc()
 
+# start = time.time()
 
-mouse.press()
-mouse.release()
+# for i in range(1):
+#     keyboard.press('ctrl')
+
+
+# end = time.time()
+
+# total = end-start
+# print(total)
