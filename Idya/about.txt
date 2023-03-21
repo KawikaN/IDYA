@@ -18,6 +18,6 @@ lag switch = lagy boi
 
 
 This project is intended to automate some actions to improve the experience of the game for myself and maybe
- a few close others to me. Its intension is to fullfill the lazy desires of active players of the game in
- order to remove what some may concieve as "redundant" or out right "boring" actions that one might 
- need to complete on a regular basis while playing the game. 
+ a few close others to me. Its intension is to fullfill the lazy desires of the active playerbase in
+ order to remove what some may concieve as "redundant" or out right "boring" actions which one might 
+ need to complete on a regular basis while in Valorant. 

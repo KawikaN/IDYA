@@ -21,6 +21,49 @@ import random
 import win32api, win32con
 import time
 import mouse
+import cv2
+import numpy as np
+
+testing = "word"
+letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+
+if testing[0].lower() in letters:
+    print("is")
+
+
+
+
+# for i in range(5):
+#     if(i == 2):
+#         break
+#     print('hi')
+
+# im = cv2.imread('Text.png')
+
+# # Define lower and upper limits of our blue
+# BlueMin = np.array([90,  200, 200],np.uint8)
+# BlueMax = np.array([100, 255, 255],np.uint8)
+
+# # Go to HSV colourspace and get mask of blue pixels
+# HSV  = cv2.cvtColor(im,cv2.COLOR_BGR2HSV)
+# mask = cv2.inRange(HSV, BlueMin, BlueMax)
+
+# # Make all pixels in mask white
+# im[mask>0] = [255,255,255]
+# cv2.imwrite('Text.png', im)
+
+
+# # Try dilating (enlarging) mask with 3x3 structuring element
+# SE   = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3,3))
+# mask = cv2.dilate(mask, kernel, iterations=1)
+
+# # Make all pixels in mask white
+# im[mask>0] = [255,255,255]
+# cv2.imwrite('Text.png', im)
+
+
+
+
 
 
 # print('--'.join(agents))

@@ -11,6 +11,7 @@ try:
     from lazy.afk import *
     from gear.loadout import *
     from char.pick import *
+    from webscrape.a import *
     
 except:
     print("There was an error trying to import the required files, check required.txt for the required libraries")
@@ -20,6 +21,9 @@ except:
 #get picture of area near crosshair
 #if rgb changes then clicks
 #if rgb changes eslewhere on the screen then cancel the trigger
+
+checkcharacter = False
+
 
 SCREEN_X = win32api.GetSystemMetrics(0)
 SCREEN_Y = win32api.GetSystemMetrics(1)
@@ -68,19 +72,26 @@ def printgui():
 printgui()
 
 while True: 
+    print("while loop on")
     if(keyboard.is_pressed("delete")): #press delete to kill the program5
         print("Finished !")
         os._exit(1)
+    if(keyboard.is_pressed("2")):
+        sing = True
+        print("WebScraping Enabled \n")
+        onn()
+        song("Leviathanjptv-chug-jug-with-you-number-one-victory-royale")
+
 
     if(keyboard.is_pressed("5")): #press 5 to start triggerbot
         triggerbot = True
         print("starting")
         onn()
         im1 = pyautogui.screenshot(region=(955, 535, 15, 15)) #x, y(from top), width, height(down)
-        im1.save(r"C:\Users\mnawe_000\Desktop\Idya\Dot.png")
+        im1.save(r"C:\Users\mnawe_000\Desktop\Idya\pics\Dot.png")
 
         im3 = pyautogui.screenshot(region=(955,100,20,20)) #x, y(from top), width, height(down)
-        im3.save(r"C:\Users\mnawe_000\Desktop\Idya\Point.png")
+        im3.save(r"C:\Users\mnawe_000\Desktop\Idya\pics\Point.png")
 
         trigger() #run trigger function in trig.py file in trigs package
         
@@ -119,11 +130,26 @@ while True:
         con()
         print("If you every want to add a different loadout to use press ctrl+L")
     if(loadout == True):
-        if(keyboard.is_pressed("ctrl+7")):# press ctrl+7 to h6+ ave it buy loadouts
+        if(keyboard.is_pressed("ctrl+7")):# press ctrl+7 to have it buy loadouts
             chlo(load()[0], load()[1], load()[3])
         if(keyboard.is_pressed("ctrl+l")):# press ctrl+l to add another loadout for it to buy
             cl()
 
     if(keyboard.is_pressed("8")):
         character = True
-    
+        print("Character autopick is enabled")
+        print("Press ctrl+8 to add a character to autopick")
+        onn()
+    if(character == True):
+        if(keyboard.is_pressed("ctrl+8")):
+            agent(findr[0], findr[1])
+            print(''.join(agents), "set to", *findr) # failes to output just the value but will keys
+            # print(*tuple) - prints out all the values of a tuple without the () around it can also use .join() method
+            checkcharacter = True
+        if(checkcharacter == True):
+            print("Press ctrl+shift+8 to pick the agent you want to insta-lock \n")
+            if(keyboard.is_pressed("ctrl+shift+8")):
+                selection = input("What agent do you want to insta-lock? \n")
+                if(match started ):
+                    mouse.click(agent[selection])
+            # if game started and character selection is on chose character

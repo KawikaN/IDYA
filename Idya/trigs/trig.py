@@ -35,14 +35,14 @@ def rgb_of_pixel(img_path, x, y):
 
 def dot2(): #gets and stores image as Dot2
     im2 = pyautogui.screenshot(region=(955, 535, 15, 15))
-    im2.save(r"C:\Users\mnawe_000\Desktop\Idya\Dot2.png")
+    im2.save(r"C:\Users\mnawe_000\Desktop\Idya\pics\Dot2.png")
 
 # size checks to see if the difference in the image files are big enough in the middle(indicating that there was movemnet at the crosshair)
 # but small enough at the top (indicating the entire screen didnt change)
 def size():
     point()
-    dif = (os.stat('Dot.png').st_size)-(os.stat('Dot2.png').st_size)#defined here because I can...
-    dif2 = (os.stat('Point.png').st_size)-(os.stat('Point2.png').st_size)
+    dif = (os.stat('\pics\Dot.png').st_size)-(os.stat('\pics\Dot2.png').st_size)#defined here because I can...
+    dif2 = (os.stat('\pics\Point.png').st_size)-(os.stat('\pics\Point2.png').st_size)
     print(dif)
     print(dif2)
 
@@ -64,14 +64,14 @@ def size():
 
 def point():
     im4 = pyautogui.screenshot(region=(955,100,20,20)) #x, y(from top), width, height(down)
-    im4.save(r"C:\Users\mnawe_000\Desktop\Idya\Point2.png")
+    im4.save(r"C:\Users\mnawe_000\Desktop\Idya\pics\Point2.png")
     #gets and stores image as Point2
 
 def shot():
-    os.remove(r"C:\Users\mnawe_000\Desktop\Idya\Dot.png", dir_fd=None)
-    os.remove(r"C:\Users\mnawe_000\Desktop\Idya\Dot2.png", dir_fd=None)
-    os.remove(r"C:\Users\mnawe_000\Desktop\Idya\Point.png", dir_fd=None)
-    os.remove(r"C:\Users\mnawe_000\Desktop\Idya\Point2.png", dir_fd=None)
+    os.remove(r"C:\Users\mnawe_000\Desktop\Idya\pics\Dot.png", dir_fd=None)
+    os.remove(r"C:\Users\mnawe_000\Desktop\Idya\pics\Dot2.png", dir_fd=None)
+    os.remove(r"C:\Users\mnawe_000\Desktop\Idya\pics\Point.png", dir_fd=None)
+    os.remove(r"C:\Users\mnawe_000\Desktop\Idya\pics\Point2.png", dir_fd=None)
 
 def trigger():  
     dot2()

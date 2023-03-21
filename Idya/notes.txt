@@ -1,3 +1,13 @@
+NOTES FOR SELF:
+set one big while statement in main that has all the while statements from the packages
+that way we can have all the whiles running at once rather than individual whiles
+have the big while statement have all the if statements and only run the if statements
+if a variable is true that way it can still be set on/off and isnt always checking
+if user doesnt want it to be enabled
+
+
+
+
 make triggerbot quicker
 get trig.py to import the photos 
 
@@ -6,5 +16,17 @@ ctrl+b to add a shortcut
 ctrl + g to stop adding shortcut off start
 
 
-shortcuts - 4 to run - ctrl+4 to add more
+6 to start afk
+
+7 to start loadout
+ctrl + 7 to have it buy
+delete to stop afk
+ctrl + l to set a new loadout
+
+8 to start character pick
+ctrl + 8 to set a character
+
+
+
+
 

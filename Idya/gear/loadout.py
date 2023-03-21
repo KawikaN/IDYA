@@ -55,7 +55,7 @@ def load():
             while(True):
                 if(keyboard.is_pressed(menue)):
                     while(True):
-                        if win32api.GetKeyState(0x01)<0:
+                        if win32api.GetKeyState(0x01)<0:# if click
                             pos = mouse.get_position()[0]
                             lox.append(pos)
                             pos = mouse.get_position()[1]
