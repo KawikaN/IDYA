@@ -11,6 +11,8 @@ while(True):
         print(mouse.get_position())
         time.sleep(0.1)
 
+#(1851, 68)
+(1851, 68)
 
 (1639, 345)
 #60

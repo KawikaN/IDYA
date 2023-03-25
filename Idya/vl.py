@@ -12,6 +12,7 @@ try:
     from gear.loadout import *
     from char.pick import *
     from webscrape.a import *
+    from webscrape.b import *
     
 except:
     print("There was an error trying to import the required files, check required.txt for the required libraries")
@@ -150,6 +151,9 @@ while True:
             print("Press ctrl+shift+8 to pick the agent you want to insta-lock \n")
             if(keyboard.is_pressed("ctrl+shift+8")):
                 selection = input("What agent do you want to insta-lock? \n")
-                if(match started ):
-                    mouse.click(agent[selection])
+                if(rgb_of_pixel(img, 1851, 68) == (255, 255, 255)):
+                    while(True):
+                        if(rgb_of_pixel(img, 1851, 68) != (255, 255, 255)):
+                            mouse.click(agent[selection])
+                            break
             # if game started and character selection is on chose character

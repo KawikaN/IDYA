@@ -23,12 +23,23 @@ import time
 import mouse
 import cv2
 import numpy as np
+import pyautogui
 
-testing = "word"
-letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
-if testing[0].lower() in letters:
-    print("is")
+print('hello world')
+
+
+# iz = "Dot2"
+# def dot2(name, pic): #gets and stores image as Dot2
+#     name = pyautogui.screenshot(region=(955, 535, 15, 15))
+#     return name.save(r"C:\Users\mnawe_000\Desktop\Idya\pics\ "+iz+" .png")
+
+# dot2(img2, dc)
+# testing = "word"
+# letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+
+# if testing[0].lower() in letters:
+#     print("is")
 
 
 

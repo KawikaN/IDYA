@@ -36,6 +36,7 @@ def rgb_of_pixel(img_path, x, y):
 def dot2(): #gets and stores image as Dot2
     im2 = pyautogui.screenshot(region=(955, 535, 15, 15))
     im2.save(r"C:\Users\mnawe_000\Desktop\Idya\pics\Dot2.png")
+    #return name.save(r"C:\Users\mnawe_000\Desktop\Idya\pics\Dot2.png")
 
 # size checks to see if the difference in the image files are big enough in the middle(indicating that there was movemnet at the crosshair)
 # but small enough at the top (indicating the entire screen didnt change)
