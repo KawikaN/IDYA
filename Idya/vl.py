@@ -81,7 +81,8 @@ while True:
         sing = True
         print("WebScraping Enabled \n")
         onn()
-        song("Leviathanjptv-chug-jug-with-you-number-one-victory-royale")
+        song(msc())
+
 
 
     if(keyboard.is_pressed("5")): #press 5 to start triggerbot
@@ -151,9 +152,10 @@ while True:
             print("Press ctrl+shift+8 to pick the agent you want to insta-lock \n")
             if(keyboard.is_pressed("ctrl+shift+8")):
                 selection = input("What agent do you want to insta-lock? \n")
-                if(rgb_of_pixel(img, 1851, 68) == (255, 255, 255)):
+                if(rgb_of_pixel(poin(1851, 68, 2, 2) == (255, 255, 255))):
                     while(True):
-                        if(rgb_of_pixel(img, 1851, 68) != (255, 255, 255)):
+                        if(rgb_of_pixel(poin(1851, 68, 2, 2) != (255, 255, 255))):
                             mouse.click(agent[selection])
                             break
+            # location of white on start of game (1851, 68)
             # if game started and character selection is on chose character

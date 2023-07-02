@@ -23,3 +23,5 @@ findr = (findd()[0], findd()[1])# creates a tuple with the results to be able to
 agent(findr[0], findr[1])
 print(''.join(agents), "set to", *findr)
 
+imgs = 
+#variable for a picture of the start of the game

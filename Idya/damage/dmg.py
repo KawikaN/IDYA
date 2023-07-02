@@ -40,13 +40,16 @@ def rgb_of_pixel(img_path, x, y):
 def pic():
     iml = pyautogui.screenshot(region=(1536,350,50,220))
     iml.save(r"C:\Users\mnawe_000\Desktop\Idya\pics\Text.png")
-    main()
+    translate()
 
-
-def main():
+def translate(Fname):
     pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\Tesseract.exe'
-    imge = Image.open(r'C:\Users\mnawe_000\Desktop\Idya\pics\Text.png')
+    imge = Image.open(r'C:\Users\mnawe_000\Desktop\Idya\pics' + "\\" + Fname)
     output = pytesseract.image_to_string(imge)
+    return output
+
+def read():
+    output = translate('\Text.png')
     print(output)
     print("made it to the convert")
 

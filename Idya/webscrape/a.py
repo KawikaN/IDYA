@@ -23,7 +23,7 @@ def song(choice):
     #    tags = soup.find('h5')
     #    print(tags)
 
-    #"Leviathanjptv-chug-jug-with-you-number-one-victory-royale"
+    #"Leviathanjptv-chug-jug-with-you-number-one-victory-royale
 
     page_to_scrape = requests.get("https://genius.com/" + choice + "-lyrics") #using genius for the lyrics
     soup = BeautifulSoup(page_to_scrape.text, "html.parser")
@@ -72,7 +72,7 @@ def song(choice):
         print("Could not find the lyrics to this song please enter a different song")
         print('stoping \n')
         exit
-    #     pass
+
 
 # "Leviathanjptv-chug-jug-with-you-number-one-victory-royale"
 #song("Leviathanjptv-chug-jugone-victory-royale")

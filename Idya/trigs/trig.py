@@ -6,7 +6,6 @@ try:
     from PIL import Image
 except:
     print("There was an error trying to import the required files, check required.txt for the required libraries")
-#errors to fix -  import file
 
 triggerbot = False #shoots with movement/enemy 
 t2s = False #Speaks out the words since your lazy
@@ -42,8 +41,8 @@ def dot2(): #gets and stores image as Dot2
 # but small enough at the top (indicating the entire screen didnt change)
 def size():
     point()
-    dif = (os.stat('\pics\Dot.png').st_size)-(os.stat('\pics\Dot2.png').st_size)#defined here because I can...
-    dif2 = (os.stat('\pics\Point.png').st_size)-(os.stat('\pics\Point2.png').st_size)
+    dif = (os.stat(r"C:\Users\mnawe_000\Desktop\Idya\pics\Dot.png").st_size)-(os.stat(r"C:\Users\mnawe_000\Desktop\Idya\pics\Dot2.png").st_size)#defined here because I can...
+    dif2 = (os.stat(r"C:\Users\mnawe_000\Desktop\Idya\pics\Point.png").st_size)-(os.stat(r"C:\Users\mnawe_000\Desktop\Idya\pics\Point2.png").st_size)
     print(dif)
     print(dif2)
 
@@ -88,3 +87,7 @@ def trigger():
     if (size() == 2): #if the size function returns 2 then kill the loop cause it fired
         triggerbot = False
         shot()
+        
+def poin(x, y, x2, y2):
+    im4 = pyautogui.screenshot(region=(x,y,x2,y2)) #x, y(from top), width, height(down)
+    im4.save(r"C:\Users\mnawe_000\Desktop\Idya\pics\Point2.png")

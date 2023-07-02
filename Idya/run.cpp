@@ -6,9 +6,11 @@ using namespace std;
 
 int main(){
 
+    
+
     POINT p;
     HDC hdc = GetDC(NULL);
-    COLORREF color = GetPixel(hdc, 1851, 68);
+    COLORREF color = GetPixel(hdc, 0, 0);
     ReleaseDC(NULL, hdc);
 
     cout << color;

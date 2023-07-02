@@ -1,9 +1,11 @@
 NOTES FOR SELF:
-set one big while statement in main that has all the while statements from the packages
-that way we can have all the whiles running at once rather than individual whiles
-have the big while statement have all the if statements and only run the if statements
-if a variable is true that way it can still be set on/off and isnt always checking
-if user doesnt want it to be enabled
+Create a picture path for main vl.py file that detects when a game has started using the rgb pixel function
+
+
+Use copy of trig to try and change all the functions into functions with inputs so i can use them
+again in other cases that I would need to take pictures. 
+I tried to figure out how to get rgb pixel color using c++ but its difficult when trying to use HDC's.
+
 
 
 

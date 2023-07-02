@@ -8,6 +8,7 @@ import win32api,win32gui
 import mss
 import PIL.ImageGrab
 import PIL.Image
+from PIL import *
 import winsound
 import pyautogui  as pg
 import threading
@@ -24,10 +25,34 @@ import mouse
 import cv2
 import numpy as np
 import pyautogui
+import json
+import time
+msg = "\\"
+print("tjis " + msg)
+# print("This is a \ msg")
+
+# s = "Kawika"
+# print(s.find("a"))
 
 
-print('hello world')
+# name = "\hi.png"
+# #print("." + name)
+# im4 = pyautogui.screenshot(region=(955,100,20,20)) #x, y(from top), width, height(down)
+# im4.save(r'C:\Users\mnawe_000\Desktop\Idya\pics' + name)
+# Image.open(r'C:\Users\mnawe_000\Desktop\Idya\pics' + name)
 
+
+# time.sleep(2)
+# im2 = pyautogui.screenshot(region=(1850, 67, 2, 2))
+# im2.save(r"C:\Users\mnawe_000\Desktop\Idya\pics\Dot2.png")
+#1851, 68
+
+# filename = "test"
+# new_title = "test"
+# extension = "png"
+# folder_to_track = 'C:\Users\mnawe_000\Desktop\Idya\pics'
+# new_name = folder_to_track + "/" + str(new_title + "." + extension)
+# os.rename(folder_to_track + "/" + filename, new_name)
 
 # iz = "Dot2"
 # def dot2(name, pic): #gets and stores image as Dot2
